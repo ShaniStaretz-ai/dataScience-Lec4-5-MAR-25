@@ -7,12 +7,16 @@ shift+tab= to see the help of the function
 from skimage import io
 photo=io.imread('image path') # same path of the notbook or, full path
 ```
-* convert the image to 2d array- shape=tuple (legth,numbers)
+* convert the image to 2d array- shape=tuple (length,numbers)
 * each cell contain the cell colors the rgb colors 
 * to view the photo:
 ```
   import matplotlit.pylot as plt
   plt.imshow(photo)
+  ```
+  * to view first 50 column:
+  ```
+    plt.imshow(photo[:, :50] )
   ```
 * np.where(photo>100,255,0)#for each cell set 255 if true, else set 0
 * plt.imshow(photo.transpose(1,0,2) # y1,x0,z2)# rotate the image
@@ -25,8 +29,9 @@ photo=io.imread('image path') # same path of the notbook or, full path
 
   # This method will show image in any image viewer
   im.show()
+ img.rotate(120,expand=True)# without expend display with the origin size
   ```
-* plt.imshow(photo[:,150,:]), 
+* plt.imshow(photo[:,150,:]) #first 150 rows 
 * to reverse=photo[::-1]
 * np.std(arr)= סטית תקן
 * np.var= שונות, different for the agv
